@@ -1,1 +1,6 @@
 language: java
+addons:
+  browserstack:
+    username: "mireshsonkamble1"
+    access_key: "YAyjQiCwR6QUF6DGvSBM"
+      secure: "The secure string output of `travis encrypt`"
