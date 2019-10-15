@@ -22,7 +22,7 @@ public class JavaSample {
     caps.setCapability("os_version", "10");
     caps.setCapability("browser", "Chrome");
     caps.setCapability("browser_version", "62.0");
-    caps.setCapability("browserstack.local", "false");
+    caps.setCapability("browserstack.local", "true");
     caps.setCapability("build", "BSSupport_M");
 
     WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
