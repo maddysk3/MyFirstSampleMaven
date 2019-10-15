@@ -18,18 +18,19 @@ public class JavaSample {
   public static void main(String[] args) throws Exception {
 
     DesiredCapabilities caps = new DesiredCapabilities();
-    caps.setCapability("browserName", "iPhone");
-    caps.setCapability("device", "iPhone 8 Plus");
-    caps.setCapability("realMobile", "true");
-    caps.setCapability("os_version", "11");
+    caps.setCapability("os", "Windows");
+    caps.setCapability("os_version", "10");
+    caps.setCapability("browser", "Chrome");
+    caps.setCapability("browser_version", "62.0");
+    caps.setCapability("browserstack.local", "false");
     caps.setCapability("build", "BSSupport_M");
 
     WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
-    driver.get("http://www.google.com");
-    WebElement element = driver.findElement(By.name("q"));
+    driver.get("http://localhost:8888/MAMP/?language=English");
+   // WebElement element = driver.findElement(By.name("q"));
 
-    element.sendKeys("BrowserStack");
-    element.submit();
+  //  element.sendKeys("BrowserStack");
+  //  element.submit();
 
     System.out.println(driver.getTitle());
     driver.quit();
